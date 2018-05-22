@@ -437,6 +437,7 @@ collada-dom:
   arch: [collada-dom]
   debian:
     buster: [libcollada-dom2.4-dp-dev]
+    jessie: [libcollada-dom2.4-dp-dev]
     stretch: [libcollada-dom2.4-dp-dev]
   fedora: [collada-dom-devel]
   gentoo: [dev-libs/collada-dom]
@@ -816,6 +817,8 @@ gazebo:
   gentoo: [sci-electronics/gazebo]
   slackware: [gazebo]
   ubuntu:
+    artful: [gazebo9]
+    bionic: [gazebo9]
     precise: [gazebo]
     quantal: [gazebo]
     raring: [gazebo]
@@ -840,6 +843,14 @@ gazebo7:
   gentoo: ['=sci-electronics/gazebo-7*']
   slackware: [gazebo]
   ubuntu: [gazebo7]
+gazebo9:
+  debian:
+    buster: [gazebo9]
+    stretch: [gazebo9]
+  gentoo: [sci-electronics/gazebo]
+  ubuntu:
+    artful: [gazebo9]
+    bionic: [gazebo9]
 gcc-arm-none-eabi:
   arch: [gcc-arm-none-eabi]
   debian: [gcc-arm-none-eabi]
@@ -887,6 +898,7 @@ geographiclib:
   fedora: [GeographicLib-devel]
   ubuntu:
     artful: [libgeographic-dev]
+    bionic: [libgeographic-dev]
     precise: [libgeographiclib-dev]
     quantal: [libgeographiclib-dev]
     raring: [libgeographiclib-dev]
@@ -1571,6 +1583,12 @@ libdrm-dev:
   fedora: [libdrm-devel]
   gentoo: [x11-libs/libdrm]
   ubuntu: [libdrm-dev]
+libdw-dev:
+  arch: [libelf]
+  debian: [libdw-dev]
+  fedora: [elfutils-devel]
+  gentoo: [dev-libs/elfutils]
+  ubuntu: [libdw-dev]
 libesd0-dev:
   debian: [libesd0-dev]
   fedora: [esound-devel]
@@ -1616,6 +1634,8 @@ libfcl-dev:
   fedora: [fcl-devel]
   gentoo: [sci-libs/fcl]
   ubuntu:
+    artful: [libfcl-dev]
+    bionic: [libfcl-dev]
     wily: [libfcl-0.5-dev]
     xenial: [libfcl-0.5-dev]
     yakkety: [libfcl-dev]
@@ -1748,6 +1768,14 @@ libgazebo7-dev:
   opensuse: [gazebo-devel]
   slackware: [gazebo]
   ubuntu: [libgazebo7-dev]
+libgazebo9-dev:
+  debian:
+    buster: [libgazebo9-dev]
+    stretch: [libgazebo9-dev]
+  gentoo: [sci-electronics/gazebo]
+  ubuntu:
+    artful: [libgazebo9-dev]
+    bionic: [libgazebo9-dev]
 libgconf2:
   arch: [gconf]
   debian: [libgconf-2-4]
@@ -1795,6 +1823,8 @@ libglew-dev:
   fedora: [glew-devel]
   gentoo: [media-libs/glew]
   ubuntu:
+    artful: [libglew-dev]
+    bionic: [libglew-dev]
     oneiric: [libglew1.5-dev]
     precise: [libglew1.6-dev]
     quantal: [libglew-dev]
@@ -2080,6 +2110,8 @@ libjsoncpp:
   fedora: [jsoncpp]
   gentoo: [dev-libs/jsoncpp]
   ubuntu:
+    artful: [libjsoncpp1]
+    bionic: [libjsoncpp1]
     precise: [libjsoncpp0]
     saucy: [libjsoncpp0]
     trusty: [libjsoncpp0]
@@ -2301,12 +2333,20 @@ libopencv-dev:
   gentoo: [media-libs/opencv]
   macports: [opencv]
   ubuntu:
+    artful: [libopencv-dev]
+    bionic: [libopencv-dev]
     saucy: [libopencv-dev]
     trusty: [libopencv-dev]
     utopic: [libopencv-dev]
     vivid: [libopencv-dev]
     wily: [libopencv-dev]
     xenial: [libopencv-dev]
+libopenexr-dev:
+  arch: [openexr]
+  debian: [libopenexr-dev]
+  fedora: [OpenEXR-devel]
+  gentoo: [media-libs/openexr]
+  ubuntu: [libopenexr-dev]
 libopenni-dev:
   arch: [openni]
   debian: [libopenni-dev]
@@ -2759,6 +2799,13 @@ libqt5-printsupport:
   freebsd: [qt5-printsupport]
   gentoo: ['dev-qt/qtprintsupport:5']
   ubuntu: [libqt5printsupport5]
+libqt5-serialport:
+  arch:   [qt5-serialport]
+  debian: [libqt5serialport5]
+  fedora: [qt5-qtserialport]
+  freebsd: [qt5-serialport]
+  gentoo: ['dev-qt/qtserialport:5']
+  ubuntu: [libqt5serialport5]
 libqt5-sql:
   arch:   [qt5-base]
   debian:
@@ -3163,6 +3210,8 @@ libusb-1.0-dev:
     '24': [libusbx-devel]
     '25': [libusbx-devel]
     '26': [libusbx-devel]
+    '27': [libusbx-devel]
+    '28': [libusbx-devel]
     beefy: [libusb1-devel]
     heisenbug: [libusbx-devel]
     schrödinger’s: [libusbx-devel]
@@ -3503,7 +3552,24 @@ log4cxx:
   opensuse: [liblog4cxx-devel]
   rhel: [log4cxx-devel]
   slackware: [apache-log4cxx]
-  ubuntu: [liblog4cxx10-dev]
+  ubuntu:
+    artful: [liblog4cxx-dev]
+    bionic: [liblog4cxx-dev]
+    lucid: [liblog4cxx10-dev]
+    maverick: [liblog4cxx10-dev]
+    natty: [liblog4cxx10-dev]
+    oneiric: [liblog4cxx10-dev]
+    precise: [liblog4cxx10-dev]
+    quantal: [liblog4cxx10-dev]
+    raring: [liblog4cxx10-dev]
+    saucy: [liblog4cxx10-dev]
+    trusty: [liblog4cxx10-dev]
+    utopic: [liblog4cxx10-dev]
+    vivid: [liblog4cxx10-dev]
+    wily: [liblog4cxx10-dev]
+    xenial: [liblog4cxx10-dev]
+    yakkety: [liblog4cxx10-dev]
+    zesty: [liblog4cxx10-dev]
 lttng-modules:
   arch: [lttng-modules]
   debian: [lttng-modules-dkms]
@@ -4822,6 +4888,8 @@ wxwidgets:
   opensuse: [wxGTK-devel]
   rhel: [wxGTK-devel]
   ubuntu:
+    artful: [libwxgtk3.0-dev]
+    bionic: [libwxgtk3.0-dev]
     lucid: [libwxgtk2.8-dev]
     maverick: [libwxgtk2.8-dev]
     natty: [libwxgtk2.8-dev]
